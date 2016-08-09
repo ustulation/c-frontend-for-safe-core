@@ -1,9 +1,9 @@
 #include <stdio.h>
 
 extern int init_logging();
-extern int create_unregistered_client(void**);
-extern int client_issued_gets(void*);
 extern int execute(char*, void*);
+extern int client_issued_gets(void*);
+extern int create_unregistered_client(void**);
 extern char* execute_for_content(char*, int*, int*, int*, void*);
 
 int main() {
@@ -18,7 +18,7 @@ int main() {
     printf("\n=========================================================================\n\n");
     printf("Initial value of result: %d\n\n", res);
 
-    printf("\nInvoking...\n");
+    printf("\nInvoking to initialise logging...\n");
     res = init_logging();
     printf("Invoked and got result: %d\n\n", res);
 
